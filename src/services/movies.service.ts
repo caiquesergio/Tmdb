@@ -13,7 +13,7 @@ export async function getPopularMovies() {
   return http<any>('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=popularity.desc').then((res) => {    
     return res.results
   }).catch(e => {
-    console.log(e);
+   return e
   });
 }
 
@@ -21,7 +21,7 @@ export async function getTopRatedMovies() {
   return http<any>('https://api.themoviedb.org/3/movie/top_rated?language=pt-BR&page=1').then((res) => {    
     return res.results
   }).catch(e => {
-    console.log(e);
+   return e
   });
 }
 
@@ -29,7 +29,7 @@ export async function getUpcomingMovies() {
   return http<any>('https://api.themoviedb.org/3/movie/upcoming?language=pt-BR&page=1').then((res) => {    
     return res.results
   }).catch(e => {
-    console.log(e);
+   return e
   });
 }
 
@@ -37,7 +37,7 @@ export async function getDetailMovie(movieId: number) {
   return http<any>(`https://api.themoviedb.org/3/movie/${movieId}?language=pt-BR`).then((res) => {    
     return res
   }).catch(e => {
-    console.log(e);
+   return e
   });
 }
 
@@ -45,7 +45,7 @@ export async function getCastMovie(movieId: number) {
   return http<any>(`https://api.themoviedb.org/3/movie/${movieId}/credits?language=pt-BR`).then((res) => {    
     return res
   }).catch(e => {
-    console.log(e);
+   return e
   });
 }
 
@@ -53,7 +53,7 @@ export async function getMovieSearch(nameMovie: string) {
   return http<any>(`https://api.themoviedb.org/3/search/movie?query=${nameMovie}&include_adult=false&language=pt-BR&page=1`).then((res) => {    
     return res.results
   }).catch(e => {
-    console.log(e);
+   return e
   });
 }
 
