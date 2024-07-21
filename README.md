@@ -8,10 +8,13 @@
 - Vite
 - Tailwind
 - vue-router
+- Vitest
+- vue/test-utils
 # Como executar
 
 ```
 Clonar projeto: https://github.com/caiquesergio/Tmdb.git
 npm install
 npm run dev
+npm run test (Rodar testes)
 ```
