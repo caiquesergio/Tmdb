@@ -12,7 +12,7 @@ function searchMoviesInput(name: string) {
 
 <template>
   <div class="flex">
-    <input type="text" name="movie" id="movie" value="" v-model="searchMovie"
+    <input type="text" name="movie" id="movie" v-model="searchMovie"
       class="rounded-full px-3 py-2 bg-white border shadow-sm border-slate-300 w-full sm:text-sm focus:ring-1 text-black"
       placeholder="Buscar por um filme">
     <button @click="searchMoviesInput(searchMovie)"
